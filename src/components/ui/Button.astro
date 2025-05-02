@@ -14,10 +14,10 @@ const {
 } = Astro.props;
 
 const variants = {
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
-  tertiary: 'btn btn-tertiary',
-  link: 'cursor-pointer hover:text-primary',
+  primary: 'bg-primary hover:bg-accent text-white font-bold py-3 px-8 rounded-none uppercase tracking-wide transition-colors duration-300',
+  secondary: 'bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 border border-primary rounded-none uppercase tracking-wide transition-colors duration-300',
+  tertiary: 'text-primary hover:text-accent font-bold py-2 px-4 rounded-none uppercase tracking-wide transition-colors duration-300',
+  link: 'cursor-pointer text-primary hover:text-accent uppercase font-bold tracking-wide',
 };
 ---
 

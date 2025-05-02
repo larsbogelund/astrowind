@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --aw-color-primary: #000000;
+    --aw-color-secondary: #404040;
+    --aw-color-accent: #3366cc;
+    --aw-color-text-default: #000000;
+    --aw-color-text-muted: #6b7280;
+    --aw-color-bg-page: #ffffff;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-default antialiased;
+  }
+
+  .dark {
+    --aw-color-primary: #ffffff;
+    --aw-color-secondary: #d1d5db;
+    --aw-color-accent: #3366cc;
+    --aw-color-text-default: #f3f4f6;
+    --aw-color-text-muted: #9ca3af;
+    --aw-color-bg-page: #121212;
+  }
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
@@ -78,11 +106,11 @@
   @apply transition;
 }
 [data-aw-toggle-menu].expanded g > path:first-child {
-  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+  @apply -rotate-45 translate-y-[14px] translate-x-[-3px];
 }
 
 [data-aw-toggle-menu].expanded g > path:last-child {
-  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+  @apply rotate-45 translate-y-[-8px] translate-x-[7px];
 }
 
 /* To deprecated */
