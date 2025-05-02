@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:pt-12 not-prose bg-primary text-white" {...id ? { id } : {}}>
+<section class="relative md:pt-3 not-prose bg-primary text-white" {...id ? { id } : {}}>
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
@@ -26,7 +26,7 @@ const {
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 pointer-events-none"></div>
-    <div class="py-20 md:py-32">
+    <div class="py-4 md:py-6">
       <div class="text-center md:text-left pb-10 md:pb-16 max-w-5xl mx-auto md:max-w-none md:mx-0 md:flex md:items-center md:justify-between">
         <div class="md:max-w-xl">
           {
