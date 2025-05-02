@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:pt-3 not-prose bg-primary text-white" {...id ? { id } : {}}>
+<section class="relative md:pt-3 not-prose bg-primary dark:bg-primary text-white dark:text-white" {...id ? { id } : {}}>
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
@@ -32,7 +32,7 @@ const {
           {
             tagline && (
               <p
-                class="text-base text-gray-300 font-medium tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                class="text-base text-white dark:text-gray-300 font-medium tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
                 set:html={tagline}
               />
             )
@@ -40,7 +40,7 @@ const {
           {
             title && (
               <h1
-                class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-white intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-white dark:text-white intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
                 set:html={title}
               />
             )
@@ -49,7 +49,7 @@ const {
             {
               subtitle && (
                 <p
-                  class="text-xl text-gray-300 mb-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                  class="text-xl text-white dark:text-gray-400 mb-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
                   set:html={subtitle}
                 />
               )
