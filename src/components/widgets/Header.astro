@@ -79,9 +79,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       <div class="flex items-center md:hidden">
         <ToggleMenu />
       </div>
-    </div>
-    <nav
-      class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-black overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center md:col-span-2"
+    </div>    <nav
+      class="items-center w-full md:w-auto hidden md:flex md:mx-5 !text-black overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center md:col-span-2"
       aria-label="Main navigation"
     >
       <ul
@@ -91,20 +90,18 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
           links.map(({ text, href, links }) => (
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
-                <>
-                  <button
+                <>                  <button
                     type="button"
-                    class="text-black hover:text-accent px-4 py-3 flex items-center whitespace-nowrap"
+                    class="!text-black hover:text-accent px-4 py-3 flex items-center whitespace-nowrap"
                   >
                     {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
-                      <li>
-                        <a
+                      <li>                        <a
                           class:list={[
-                            'text-black first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-accent dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                            '!text-black first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-accent dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
                             { 'text-accent': href2 === currentPath },
                           ]}
                           href={href2}
@@ -115,10 +112,9 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                     ))}
                   </ul>
                 </>
-              ) : (
-                <a
+              ) : (                <a
                   class:list={[
-                    'text-black hover:text-accent px-4 py-3 flex items-center whitespace-nowrap transition-colors duration-300',
+                    '!text-black hover:text-accent px-4 py-3 flex items-center whitespace-nowrap transition-colors duration-300',
                     { 'text-accent': href === currentPath },
                   ]}
                   href={href}

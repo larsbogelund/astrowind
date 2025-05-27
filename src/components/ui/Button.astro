@@ -14,10 +14,10 @@ const {
 } = Astro.props;
 
 const variants = {
-  primary: 'bg-primary hover:bg-accent text-white font-bold py-3 px-8 rounded-none uppercase tracking-wide transition-colors duration-300',
-  secondary: 'bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 border border-primary rounded-none uppercase tracking-wide transition-colors duration-300',
-  tertiary: 'text-primary hover:text-accent font-bold py-2 px-4 rounded-none uppercase tracking-wide transition-colors duration-300',
-  link: 'cursor-pointer text-primary hover:text-accent uppercase font-bold tracking-wide',
+  primary: 'bg-primary hover:bg-accent text-white dark:text-black font-bold py-3 px-8 rounded-none uppercase tracking-wide transition-colors duration-300',
+  secondary: 'bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 border border-primary rounded-none uppercase tracking-wide transition-colors duration-300 dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-slate-700',
+  tertiary: 'text-primary hover:text-accent font-bold py-2 px-4 rounded-none uppercase tracking-wide transition-colors duration-300 dark:text-white dark:hover:text-accent',
+  link: 'cursor-pointer text-primary hover:text-accent uppercase font-bold tracking-wide dark:text-white dark:hover:text-accent',
 };
 ---
 
